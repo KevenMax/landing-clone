@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="scripts.js"></script>
   </head>
 
-  <body>
+  <body id="gradient-background">
     <section id="header">
       <img id="image" src="/images/dry-clean.svg"/>
 
@@ -24,9 +25,11 @@
         </li>
       </ul>
       <div id="actions">
-        <a class="light-button">Login</a>
+        <a class="blue-button" onclick="handleBackground(this)">Blue</a>
 
-        <a class="dark-button">Register</a>
+        <a class="white-button" onclick="handleBackground(this)">White</a>
+
+        <a class="black-button" onclick="handleBackground(this)">Black</a>
       </div>
     </section>
 
@@ -75,6 +78,22 @@
       </div>
     </section>
 
+    <section id="messages">
+      <h2>Leave your message</h2>
+
+      <form> 
+        <p>Name</p>
+        <input>
+        
+        <p>Message</p>
+        <input>
+
+        <button type="submit">Send</button>
+      </form>
+
+      </form>
+    </section>
+
     <section id="footer">
       <div id="questions">
         <img src="/images/manager.jpg"/>
@@ -86,10 +105,24 @@
         </p>
       </div>
 
-      <div id="social-midias">
-        <span>Facebook</span> / <span>Linkedin</span> / <span>Instagram</span>
+      <div id="social-midias">    
+        <p>
+          <span>Facebook</span> / <span>Linkedin</span> / <span>Instagram</span>
+        </p>
+
+        <a class="dark-button" href="#credits">Créditos</a><br>
       </div>
       
     </section>
+
+    <div id="credits" class="modal">
+      <div class="container-modal">
+        <a href="#close-modal" title="Fechar" class="close-modal">x</a>
+        <h2>Créditos</h2>
+        <hr>
+        <h3>Disciplina - Desenvolvimento de Software para Web</h3>
+        <h4>Feito por Keven Max Noronha de Lima </h4>
+      </div>
+    </div>
   </body>
 </html>

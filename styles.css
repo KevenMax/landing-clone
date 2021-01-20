@@ -27,11 +27,19 @@
   color: #1D1E3B;
 }
 
+input:focus {
+  outline: none;
+}
+
 body {
-  background-image: linear-gradient(to right, #F0FCFF, #fdf4f6);
+  
   padding: 0 40px;
   margin: 0;
   min-height: 100vh;
+}
+
+body#gradient-background{
+  background-image: linear-gradient(to right, #F0FCFF, #fdf4f6);
 }
 
 #header {
@@ -101,7 +109,9 @@ body {
   justify-content: space-between;
 }
 
-#header #actions a {
+a.light-button, a.dark-button, 
+a.blue-button, a.white-button, 
+a.black-button {
   width: 120px;
   height: 50px; 
   
@@ -115,17 +125,44 @@ body {
   font-size: 12px;
 }
 
-#header #actions .light-button {
+.light-button {
   color: #1D1E3B;
 }
 
-#header #actions .dark-button {
+.dark-button {
   color: #ffffff;
   background: #1D1E3B;
 }
 
-#header #actions .dark-button:hover {
+.dark-button:hover {
   background: #2c2c3f;
+}
+
+.blue-button {
+  color: #1D1E3B;
+  background: #abd8e4;
+}
+
+.blue-button:hover {
+  background: #c2e0e9;
+}
+
+.white-button {
+  color: #1D1E3B;
+  background: #fff;
+}
+
+.white-button:hover {
+  background: #fffdfd;
+}
+
+.black-button {
+  color: #ffffff;
+  background: #000;
+}
+
+.black-button:hover {
+  background: #1b1b1b;
 }
 
 #home {
@@ -291,8 +328,38 @@ body {
   right: 370px;
 }
 
+section#messages {
+  padding: 120px 0 0 70px;
+}
+
+#messages h2 {
+  font-size: 40px;
+  font-family: 'Montserrat-SemiBold';
+  color: #1D1E3B;
+  margin: 0;
+  text-align: center;
+}
+
+#messages form {
+  display: flex;
+  padding: 30px 0 0 0;
+  justify-content: center;
+}
+
+#messages form input {
+  width: 250px;
+  height: 45px;
+  border-radius: 30px;
+  border: 0px solid #fff;
+  padding-left: 15px;
+  color: #1D1E3B;
+  font-family: 'Montserrat-Medium';
+  font-size: 12px;
+  letter-spacing: 0px;
+}
+
 #footer {
-  padding: 140px 100px 0 100px;
+  padding: 140px 100px 20px 100px;
   display: flex;
   justify-content: space-between;
 }
@@ -332,8 +399,77 @@ body {
   margin: 10px 0 0 0;
   font-family: 'Montserrat-Medium';
   font-size: 14px;
+  display: flex;
 }
 
-#footer #social-midias span{
+#footer #social-midias p span{
   cursor: pointer;
+}
+
+#footer #social-midias a{
+  margin: 0 0 0 40px;
+  text-decoration: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: 'Montserrat-Regular';
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal > div {
+  width: 500px;
+  position: relative;
+  margin: 10% auto;
+  padding: 15px 20px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.close-modal {
+  position: absolute;
+  width: 30px;
+  right: 0;
+  top: 0;
+  text-align: center;
+  margin: 5px 5px 0 0;
+  font-size: 22px;
+  color: #1D1E3B;
+  text-decoration: none;
+}
+
+.modal h2{
+  font-family: 'Montserrat-Regular';
+  color: #2c2c3f;
+  text-align: center;
+}
+
+.modal h3 {
+  font-family: 'Montserrat-Regular';
+  font-size: 18px;
+  color: #2c2c3f;
+  text-align: center;
+  
+}
+
+.modal h4 {
+  font-family: 'Montserrat-Light';
+  color: #2c2c3f;
+  font-size: 16px;
+  text-align: center;
 }
